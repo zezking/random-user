@@ -8,7 +8,7 @@ export default function Application() {
   // const data = await response.json();
   // const [item] = data.results;
 
-  useEffect(async () => {
+  useEffect(() => {
     axios.get("https://randomuser.me/api/").then((res) => {
       const [item] = res.data.results;
       setUser(item);
