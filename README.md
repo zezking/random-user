@@ -1,5 +1,5 @@
 ### Result
-[demo](/random.gif)
+![demo](./random.gif)
 
 ### This is a small practice with React Hooks using useState and UseEffect 
 
