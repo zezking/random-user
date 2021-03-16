@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
-
+import axios from "axios";
 export default function Application() {
   const [user, setUser] = useState(null);
   const [count, setCount] = useState(0);
-  
-  const response = await fetch("https://randomuser.me/api/");
-  const data = await response.json();
-  const [item] = data.results;
+
+  // const response = await fetch("https://randomuser.me/api/");
+  // const data = await response.json();
+  // const [item] = data.results;
+
   useEffect(async () => {
-  setUser(item);
-}, [count]);
+    axios.get("https://randomuser.me/api/").then((res) => {
+      const [item] = res.data.results;
+      setUser(item);
+    });
+  }, [count]);
 
   return (
     <div>
