@@ -7,5 +7,5 @@ This program will generate random user profiles with click with async call and a
 
 
 ### Dependencies
-React
-Random User API
+- React
+- Random User API
